@@ -40,7 +40,14 @@ body{
     background-color:var(--body-color) ;
     font-family: var(--body-font);
     overflow-x: hidden;
+    transition: 0.5s;
 }
+body.dark{
+    background-color: #2C3333;
+    color: var(--container-color);
+    transition: 0.5s;
+}
+
 .header {
      width: 100%;
     /* background: transparent; */ 
@@ -63,7 +70,6 @@ body{
     display: flex;
     align-items: center;
     padding: 5px 10%;
-   
 }
 
 .nav__logo-icon {
@@ -116,6 +122,25 @@ transition: opacity 0.5ms, transform 0.5ms;
 .home:active{
     transform: scale(0.9);
 }
+.cambiar-color{
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--button-color-alt);  
+    border-radius: 5px;
+    color: #fff
+}
+.cambiar-color:hover{
+    background-color: var(--first-color);
+}
+.cambiar-color:hover{
+    opacity: 0.7;
+    
+    
+}
+.cambiar-color:active{
+    transform: scale(0.9);
+}
 /*********sección 1**********/
 .seccion1{
     min-height: 90vh;
@@ -147,6 +172,11 @@ transition: opacity 0.5ms, transform 0.5ms;
      right: 0;
 }
 
+body.dark .seccion1-container-img{
+    background-color: #fff;
+    border-radius: 10px;
+    transition: 0.5s;
+}
 
 img{
     
@@ -176,9 +206,7 @@ transition: opacity 0.5ms, transform 0.5ms;
     background-color: var(--first-color);
 }
 button:hover{
-    opacity: 0.7;
-    
-    
+    opacity: 0.7;    
 }
 button:active{
     transform: scale(0.9);
@@ -205,6 +233,7 @@ color: #fff;
     border-radius: 5px;
     color: #fff
 }
+
  @media (max-width:520px){
     .seccion1-container{
         display: flex;
@@ -268,7 +297,12 @@ color: #fff;
     height: 100px;
     background-color: var(--container-color);
     border-radius: 0 0 15px 15px;
+    transition: 0,5s;
     
+}
+body.dark .precio-de-prenda{
+    background-color: #261C2C;
+    transition: 0,5s;
 }
 .precio-de-prenda h2, span {
     margin-top: 1.5em;
@@ -284,7 +318,29 @@ color: #fff;
     height: 300px;
     margin-left: auto;
 }
+body.dark .background-img{
+background-color: #35858B;
+transition: 0.5s;
+}
+/* .h3seccion2{
+    font-size: var(--normal-font-size);
+} */
+/* .boton-seccion2-img{
+    height: 40px;
+    margin-bottom: 2rem;
+    /* border-radius: 25px;
+     border-top-left-radius: 50px; */
+    /* border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;  */
+    /* padding: 0.625rem; */
+    /* display: inline-flex; */
+    /* border: none;
+    background-color: var(--body-color);
+    color: var(--title-color);
+    box-shadow: 0 4px 12px hsl(206deg 4% 4% / 20%);
 
+} */ 
 @media (max-width: 958px){
     .container-img-seccion2{
         display: grid;
@@ -333,10 +389,13 @@ color: #fff;
 footer{
     /* min-height: 80vh; */
     padding: 5px 10%;
-    background-color: var(--card-color);
-    
-    
+    background-color: var(--card-color);   
 }
+body.dark footer{
+    background-color: #2C272E;
+    transition: 0.5s;
+}
+
 /* @media (max-width:606px){
     footer{
         min-height: 200vh;
